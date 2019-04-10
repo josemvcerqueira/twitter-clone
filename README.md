@@ -1,4 +1,57 @@
+# Simple Twitter App
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+This web application allows the user to:
+
+-   View all Tweets
+-   Create a new Tweet
+-   Reply to an existing Tweet
+-   Like an existing Tweet
+
+## Technology Stack
+
+-   React for the view library
+-   Redux for state management
+-   React Router for routing
+
+## TL;DR
+
+To run the project right away:
+
+-   clone the repo with `git clone https://github.com/josemvcerqueira/twitter-clone.git`
+-   install all project dependencies with `npm install`
+-   start the development server with `npm start`
+
+## What You're Getting
+
+The app is organized using the "Rails Style"
+
+```bash
+├── public
+├── src
+│   ├── components
+    │   ├── actions # Includes files for actions to be dispatched
+    │   ├── components # Includes files for components to be rendered
+    │   ├── middleware # Includes files for the middleware to the redux store
+    │   ├── reducers # Includes files for the reducers to the redux store
+    │   ├── utils # Folder that includes a fake database, helper functions and API-like functions
+    │   ├── index.css # A file with the global styles
+    │   └── index.js # Index file where the store is created
+├── .gitignore # Simple file to prevent unnedded files to be stored on GitHub.
+├── README.md - This file.
+├── package-lock.json # npm package manager file.
+└── package.json # npm package manager file.
+
+```
+
+## Pseudo Backend Server
+
+The provided file [`api.js`](src/utils/api.js) contains the methods you will need to perform necessary operations on the backend:
+
+-   [`getInitialData`] - fetches the data to be rendered by the Home Page
+-   [`saveLikeToggle`] - allows a user to like or dislike a tweet
+-   [`saveTweet`] - push a tweet to the database
 
 ## Available Scripts
 
@@ -37,32 +90,8 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Purpose
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This repository is for educational purposes and part of the udacity curriculum. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
