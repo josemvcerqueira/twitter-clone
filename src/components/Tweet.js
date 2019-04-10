@@ -15,7 +15,6 @@ class Tweet extends Component {
 
 	handleLike = event => {
 		event.preventDefault();
-
 		const { dispatch, tweet, authedUser } = this.props;
 
 		dispatch(
@@ -25,8 +24,6 @@ class Tweet extends Component {
 				authedUser
 			})
 		);
-
-		// todo: handle like tweet
 	};
 	render() {
 		const { tweet } = this.props;
